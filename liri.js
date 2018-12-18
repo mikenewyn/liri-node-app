@@ -1,8 +1,6 @@
-
 require("dotenv").config();
 var Keys = require('./keys.js');
 var request = require('request');
-var fs = require('fs');
 var Spotify = require('node-spotify-api');
 var moment = require('moment');
 
@@ -15,14 +13,14 @@ var nodeArgs = process.argv;
 
 var search = "Mr Nobody";
 var songSearch = "The Sign";
-var bandSearch = "Childish Gambino";
+var artist = "Childish Gambino";
 
 for (var i = 3; i < nodeArgs.length; i++) {
 
   if (3 === i) {
     search = " ";
     songSearch = " ";
-    bandSearch = "";
+    artist = "";
   }
   search = search + " " + nodeArgs[i];
   songSearch = songSearch + " " + nodeArgs[i];
